@@ -1,0 +1,28 @@
+1 d f
+2 a c d f
+3 c | b c
+4 c
+5 a | d
+6 b
+7 a
+8 g
+9 a d e | a c e
+10 c
+11 a | a f
+12 f | e
+13 b | a g
+14 a/f |d
+15 c e g
+16 f h
+17 b
+18 f
+19 a f
+20 a d
+21 a c d | a c d e
+22 a | f
+
+
+=======
+9
+10
+21

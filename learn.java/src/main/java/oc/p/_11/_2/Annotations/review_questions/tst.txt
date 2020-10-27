@@ -1,0 +1,25 @@
+1. e
+2. d, f
+3. b, d, e
+4. a, c, d | d
+5. b, c, d | b, c
+6. e, g
+7. a, b, c, d, e, f
+8. b, f
+9. f | d
+10. g
+11. d, f | c, d, f
+12. b, d | b, c, d
+13. a | a, d
+14. d
+15. a | b
+16. a, f | f
+17. e | b, e
+18. c, d, e, f
+19. a, f
+20. g | d, f
+21. g
+22. f
+23. b | a
+24. a, e
+25. c

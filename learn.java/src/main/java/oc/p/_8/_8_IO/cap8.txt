@@ -1,0 +1,28 @@
+1 a d
+2 e f | b e f
+3 c e | c d
+4 c d | c
+5 b e | b d e
+6 a | a e
+7 d
+8 a
+9 a d | a
+10 a b | c f
+11 c f g | c e g
+12 e | b c
+13 a c d | a c e
+14 e
+15 a
+16 d | d f
+17 a b g | a b d g
+18 b d e
+19 b c d
+20 a c
+21 a c
+22 e
+23 h
+
+=======
+6
+9
+
