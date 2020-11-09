@@ -6,5 +6,7 @@ import java.lang.annotation.Repeatable;
 @Repeatable(Rules.class)
 public @interface Rule {
     String value();
+
+    String[] effect() default {};
 }
 

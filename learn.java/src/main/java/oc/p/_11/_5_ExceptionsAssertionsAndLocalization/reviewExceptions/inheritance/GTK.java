@@ -3,7 +3,8 @@ package oc.p._11._5_ExceptionsAssertionsAndLocalization.reviewExceptions.inherit
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.NotSerializableException;
-import java.lang.annotation.Repeatable;
+
+import oc.p._11._2.Annotations.Inheritance;
 
 class GTK {
 

@@ -17,7 +17,7 @@ class C {
 
     }
 
-    @Rule("deprecation/unchecked for the exam" )
+    @Rule(value = "deprecation/unchecked for the exam" )
     @SuppressWarnings("aici e nevoie de un text")
     void m2(){
         m();
