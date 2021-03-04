@@ -60,8 +60,8 @@ class SuppresedExceptions {
     public static void main(String[] args) {
         SuppresedExceptions se = new SuppresedExceptions();
 //        se.m();
-//        se.m2();
+        se.m2();
 //        se.m3();
-        se.m4();
+//        se.m4();
     }
 }

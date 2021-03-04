@@ -25,10 +25,12 @@ class L {
         final long start = System.currentTimeMillis();
 
         Observable.range(1, 10)
-                .flatMap(i -> Observable
-                        .just(i)
-                        .subscribeOn(Schedulers.computation())
-                        .map(Util::intenseCalculation))
+                .flatMap(
+                        i ->
+                        Observable
+                                .just(i)
+                                .subscribeOn(Schedulers.computation())
+                                .map(Util::intenseCalculation))
                 .blockingSubscribe(Util.printObserver());
 
         final long end = System.currentTimeMillis();
@@ -41,11 +43,13 @@ class L {
         AtomicInteger ai = new AtomicInteger(0);
 
         final long start = System.currentTimeMillis();
-        Observable.range(1, 10)
+        Observable
+                .range(1, 10)
                 .groupBy(i -> ai.incrementAndGet() % availableProcessors)
-                .flatMap(grp -> grp
-                        .observeOn(Schedulers.io())
-                        .map(Util::intenseCalculation))
+                .flatMap(
+                        grp -> grp
+                                .observeOn(Schedulers.io())
+                                .map(Util::intenseCalculation))
                 .blockingSubscribe(Util.printObserver());
         final long end = System.currentTimeMillis();
         System.out.println("Took: " + (end - start));

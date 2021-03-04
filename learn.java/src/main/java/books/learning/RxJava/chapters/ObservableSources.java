@@ -15,4 +15,12 @@ public class ObservableSources {
                         final var m = Short.MAX_VALUE % i;
                         return i;
                     });
+
+    public static final Observable<Integer> NUMBER_WITH_AE =
+            Observable
+                    .just(1)
+                    .map(i -> {
+                        final var m = Short.MAX_VALUE % i;
+                        return i;
+                    });
 }

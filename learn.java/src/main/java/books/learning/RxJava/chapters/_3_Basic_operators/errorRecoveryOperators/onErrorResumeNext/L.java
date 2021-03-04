@@ -53,6 +53,24 @@ class L {
         return Single.just(item);
     }
 
+    static Observable<String> m5(){
+        ObservableSources
+                .NUMBER_WITH_AE
+                .subscribe(
+                        i -> System.out.println("i:" + i),
+                        err -> System.out.println(err.getMessage()),
+                        () -> Observable.just("Ok"));
+        return Observable.just("nOK");
+    }
+
+    static void m6(){
+        m5()
+                .subscribe(
+                        a -> System.out.println("m6: " + a),
+                        err -> System.out.println("m6 err"),
+                        () ->  System.out.println("m6 complete"));
+    }
+
     private static SingleSource<String> transform(String s) {
         return Single.just(s + " " + s);
     }
@@ -61,6 +79,7 @@ class L {
 //        m();
 //        m2();
 //        m3();
-        m4();
+//        m4();
+        m6();
     }
 }
