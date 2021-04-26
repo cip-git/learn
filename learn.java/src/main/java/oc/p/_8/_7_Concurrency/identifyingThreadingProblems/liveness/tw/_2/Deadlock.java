@@ -21,12 +21,18 @@ class Deadlock {
         intersection.arrive(c, E);
         intersection.arrive(c2, W);
         intersection.arrive(c3, S);
-        intersection.arrive(c4, N);
+//        intersection.arrive(c4, N);
 
         ExecutorService exec = Executors.newCachedThreadPool();
+
         try {
             intersection.cars().forEach(exec::submit);
-            TimeUnit.SECONDS.sleep(5);
+            TimeUnit.SECONDS.sleep(1);
+
+            intersection.arrive(c4, N);
+            exec.submit(c4);
+            TimeUnit.MILLISECONDS.sleep(25);
+
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -71,7 +77,7 @@ class Deadlock {
 
     enum State {
         BEFORE_INTERSECTION,
-        INTERSECTION,
+        IN_INTERSECTION,
         AFTER_INTERSECTION;
     }
 
@@ -87,7 +93,7 @@ class Deadlock {
 
         @Override
         public void run() {
-            moveTo(INTERSECTION);
+            moveTo(IN_INTERSECTION);
             try {
                 TimeUnit.MILLISECONDS.sleep(20);
                 cross(intersection);

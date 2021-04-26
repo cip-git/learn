@@ -10,17 +10,18 @@ public class ObservableSources {
     public static final Observable<Integer> RANDOM_NUMBERS = Observable.just(5, 3, 7, 10, 2, 14);
     public static final Observable<Integer> RANDOM_NUMBERS_WITH_AE =
             Observable
-                    .just(5, 3, 7,  0, 10, 2, 14, 0)
+                    .just(5, 3, 7,  0, 10, 2, 14, 0, 11)
                     .map(i -> {
                         final var m = Short.MAX_VALUE % i;
                         return i;
                     });
 
+    public static final Observable<Integer> NUMBER =
+            Observable
+                    .just(1);
+
     public static final Observable<Integer> NUMBER_WITH_AE =
             Observable
                     .just(1)
-                    .map(i -> {
-                        final var m = Short.MAX_VALUE % i;
-                        return i;
-                    });
+                    .map(i -> 1 / 0);
 }

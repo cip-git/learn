@@ -17,12 +17,29 @@ import io.reactivex.Observable;
 class CM {
 
     static void m() {
-        ObservableSources.GREEK_ALPHABET
+        ObservableSources
+                .GREEK_ALPHABET
                 .concatMap(s -> Observable.fromArray(s.split("")))
                 .subscribe(System.out::println);
     }
 
+    static void m2() {
+        ObservableSources
+                .NUMBER
+                .concatMap(i -> {
+                    System.out.println("In concatMap");
+                    return Observable.just(i + 10);
+                })
+                .onErrorResumeNext(t -> {
+                    System.out.println("onErrorResumeNext: " + t.getMessage());
+                    return Observable.just(7).map(i -> i / 0);
+                })
+                .doOnError(e -> System.out.println("doOnError: " + e.getMessage()))
+                .subscribe(System.out::println, err -> System.out.println("subscribe: " + err.getMessage()));
+    }
+
     public static void main(String[] args) {
-        m();
+//        m();
+        m2();
     }
 }
