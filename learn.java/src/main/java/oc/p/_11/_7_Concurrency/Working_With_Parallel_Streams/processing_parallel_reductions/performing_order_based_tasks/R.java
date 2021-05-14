@@ -1,10 +1,8 @@
 package oc.p._11._7_Concurrency.Working_With_Parallel_Streams.processing_parallel_reductions.performing_order_based_tasks;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 /**
  * Any stream operation that is based on order, including
