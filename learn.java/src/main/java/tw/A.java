@@ -1,0 +1,4 @@
+package tw;
+
+class A {
+}
