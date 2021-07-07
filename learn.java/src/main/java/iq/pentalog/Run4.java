@@ -3,7 +3,6 @@ package iq.pentalog;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +11,7 @@ import java.util.stream.Collectors;
 
 import utils.print.Print;
 
-class Run3 {
+class Run4 {
 
     private Path inputPath;
     private Path outputPath;
@@ -23,7 +22,7 @@ class Run3 {
     }
 
     public static void main(String[] args) throws IOException {
-        final var run = new Run3();
+        final var run = new Run4();
         run.lyrics();
     }
 
@@ -31,13 +30,8 @@ class Run3 {
         final var builder = new StringBuilder();
         final var map = new HashMap<String, Integer>();
 
-        final var list = Files
-                .readAllLines(inputPath);
-//
-//        final var newStropheIndex = new ArrayList<Integer>();
-//        while ()
-
-        list
+        Files
+                .readAllLines(inputPath)
                 .forEach(line -> addLine(builder, map, line));
 
         final var res = map
