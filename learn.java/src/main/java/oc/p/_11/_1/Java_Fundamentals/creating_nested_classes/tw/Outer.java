@@ -2,6 +2,8 @@ package oc.p._11._1.Java_Fundamentals.creating_nested_classes.tw;
 
 class Outer {
 
+    int x = 1;
+
     class Inner {
 
         static final int i = 1;
@@ -12,6 +14,9 @@ class Outer {
         static final int i  = 1;
 //        static final void m(){}
 
+        void m2(){
+            final int i = Outer.this.x;
+        }
     };
 
     static class StaticInner{
