@@ -1,4 +1,4 @@
-package gtk.solid.liskov.ok;
+package gtk.solid.liskov.vehicule.ok;
 
 class ElectricCar implements ElectricVehicule{
 

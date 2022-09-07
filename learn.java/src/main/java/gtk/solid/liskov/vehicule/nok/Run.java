@@ -1,4 +1,4 @@
-package gtk.solid.liskov.nok;
+package gtk.solid.liskov.vehicule.nok;
 
 class Run {
 
