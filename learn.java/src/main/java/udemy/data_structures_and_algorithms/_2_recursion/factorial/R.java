@@ -1,4 +1,4 @@
-package udemy.data_structures_and_algorithms.recursion.factorial;
+package udemy.data_structures_and_algorithms._2_recursion.factorial;
 
 class R {
 

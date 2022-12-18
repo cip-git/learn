@@ -1,4 +1,4 @@
-package udemy.data_structures_and_algorithms.recursion.logic_behind;
+package udemy.data_structures_and_algorithms._2_recursion.logic_behind;
 
 class A {
 

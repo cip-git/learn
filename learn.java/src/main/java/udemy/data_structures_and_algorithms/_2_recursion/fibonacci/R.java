@@ -1,4 +1,4 @@
-package udemy.data_structures_and_algorithms.recursion.fibonacci;
+package udemy.data_structures_and_algorithms._2_recursion.fibonacci;
 
 class R {
 

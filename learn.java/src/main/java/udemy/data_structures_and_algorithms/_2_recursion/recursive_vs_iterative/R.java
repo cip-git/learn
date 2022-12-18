@@ -1,4 +1,4 @@
-package udemy.data_structures_and_algorithms.recursion.recursive_vs_iterative;
+package udemy.data_structures_and_algorithms._2_recursion.recursive_vs_iterative;
 
 class R {
 
